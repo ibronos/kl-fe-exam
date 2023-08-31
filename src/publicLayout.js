@@ -19,7 +19,8 @@ const PublicLayout = () => {
                     KLEDO TEST
                 </div>
                 <div className="page-header-link text-white">
-                    <Link to="/profile" className='bg-black p-3 inline-block'> Profile </Link>
+                    <Link to="/dashboard" className='bg-black p-3 inline-block'> Dashboard </Link>
+                    <Link to="/profile" className='p-3 inline-block'> Profile </Link>
                     <Link to="/login" className='p-3 inline-block'> Login </Link>
                     {/* {(() => {
                          if (authenticated) {

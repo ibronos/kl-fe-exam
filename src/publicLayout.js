@@ -7,7 +7,7 @@ const PublicLayout = () => {
     useEffect(() => {
         const loggedInUser = localStorage.getItem("authenticated");
         if (loggedInUser) {
-        setauthenticated(loggedInUser);
+            setauthenticated(loggedInUser);
         }
     }, []);
 

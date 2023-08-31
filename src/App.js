@@ -22,7 +22,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/shipping" element={<Shipping />} />
             <Route path="dashboard/shipping/add" element={<ShippingAdd />} />
-            <Route path="dashboard/shipping/edit" element={<ShippingEdit />} />
+            <Route path="dashboard/shipping/:id" element={<ShippingEdit />} />
           </Route>
         </Routes>
     </Router>

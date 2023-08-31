@@ -96,13 +96,11 @@ const Shipping = () => {
                             <tr key={d.id}>
                                 <td className='border border-slate-300'>{d.name}</td>
                                 <td className='border border-slate-300'>
-                                    <Link to="/dashboard" className=''> 
+                                    <Link to={"/dashboard/shipping/"+d.id} className=''> 
                                         <FontAwesomeIcon icon={faEdit} className='pr-2' />
-                                         
                                     </Link>
-                                    <Link to="/dashboard" className='' onClick={() => handleDelete(d.id)}> 
+                                    <Link to="" className='' onClick={() => handleDelete(d.id)}> 
                                         <FontAwesomeIcon icon={faTrash} className='pr-2' />
-                                         
                                     </Link>
                                 </td>
                             </tr>

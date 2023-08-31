@@ -16,20 +16,26 @@ const DashboardLayout = () => {
     useEffect(() => {
 
         const loggedInUser = localStorage.getItem("authenticated");
-        
-        if (loggedInUser) {
-            setauthenticated(loggedInUser);
-            const data = localStorage.getItem("userData");
-            setName(JSON.parse(data).data.user.name);
-            setLoginData(JSON.parse(data).data);
-            setContextData({
-                authenticated: loggedInUser,
-                loginData: JSON.parse(data).data
-            });
-            // console.log(JSON.parse(data).data);
-        } else {
+
+        try {
+            if (loggedInUser) {
+                setauthenticated(loggedInUser);
+                const data = localStorage.getItem("userData");
+                setName(JSON.parse(data).data.user.name);
+                setLoginData(JSON.parse(data).data);
+                setContextData({
+                    authenticated: loggedInUser,
+                    loginData: JSON.parse(data).data
+                });
+                // console.log(JSON.parse(data).data);
+            } else {
+                navigate("/login");
+            }
+        } catch (error) {
             navigate("/login");
         }
+        
+       
 
     }, []);
 

@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 // import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from './public/Home';
 import Login from "./public/Login";
 import Profile from "./public/Profile";
 import Dashboard from "./dashboard/index";
@@ -14,6 +15,7 @@ function App() {
     <Router>
         <Routes>
           <Route element={<PublicLayout />} >
+            <Route path="/" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="profile" element={<Profile />} />
           </Route>

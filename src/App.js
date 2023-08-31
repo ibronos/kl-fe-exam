@@ -6,7 +6,7 @@ import Profile from "./public/Profile";
 import Dashboard from "./dashboard/index";
 import PublicLayout from './publicLayout';
 import DashboardLayout from './dashboardLayout';
-import Shipping from './dashboard/shipping';
+import { Shipping, ShippingAdd, ShippingEdit } from './dashboard/shipping';
 
 function App() {
 
@@ -21,6 +21,8 @@ function App() {
           <Route element={<DashboardLayout />} >
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/shipping" element={<Shipping />} />
+            <Route path="dashboard/shipping/add" element={<ShippingAdd />} />
+            <Route path="dashboard/shipping/edit" element={<ShippingEdit />} />
           </Route>
         </Routes>
     </Router>

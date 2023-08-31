@@ -1,9 +1,5 @@
-const Shipping = () => {
-return (
-        <div>
-            <p>Welcome to your Shipping</p>
-        </div>
-    );
-};
+import Shipping from './list';
+import ShippingAdd from './add';
+import ShippingEdit from './edit';
 
-export default Shipping;
+export { Shipping, ShippingAdd, ShippingEdit };

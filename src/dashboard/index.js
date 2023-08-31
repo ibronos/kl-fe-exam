@@ -5,8 +5,7 @@ const Dashboard = () => {
 
   const { contextData } = useContextData();
   let name = contextData.authenticated && contextData.loginData.user.name ? contextData.loginData.user.name : "";
-  console.log(contextData);
-
+  
     return (
       <div className="">
         <h1 className="text-3xl font-bold">Dashboard</h1>
